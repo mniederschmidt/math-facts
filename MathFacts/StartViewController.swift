@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StartViewController.swift
 //  MathFacts
 //
 //  Created by Mary Niederschmidt on 12/13/17.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override func viewDidLoad() {=
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }

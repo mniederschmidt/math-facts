@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93C42B301FEB0D9700E33BB8 /* FactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C42B2F1FEB0D9700E33BB8 /* FactViewController.swift */; };
+		93C42B321FEB101400E33BB8 /* CelebrateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C42B311FEB101400E33BB8 /* CelebrateViewController.swift */; };
 		93C6D0421FE2040000C1088F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6D0411FE2040000C1088F /* AppDelegate.swift */; };
-		93C6D0441FE2040000C1088F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6D0431FE2040000C1088F /* ViewController.swift */; };
+		93C6D0441FE2040000C1088F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6D0431FE2040000C1088F /* StartViewController.swift */; };
 		93C6D0471FE2040000C1088F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C6D0451FE2040000C1088F /* Main.storyboard */; };
 		93C6D04A1FE2040000C1088F /* MathFacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93C6D0481FE2040000C1088F /* MathFacts.xcdatamodeld */; };
 		93C6D04C1FE2040000C1088F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C6D04B1FE2040000C1088F /* Assets.xcassets */; };
 		93C6D04F1FE2040000C1088F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C6D04D1FE2040000C1088F /* LaunchScreen.storyboard */; };
+		93D6CFDA2002A6F300EE0E70 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D6CFD92002A6F300EE0E70 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93C42B2F1FEB0D9700E33BB8 /* FactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewController.swift; sourceTree = "<group>"; };
+		93C42B311FEB101400E33BB8 /* CelebrateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrateViewController.swift; sourceTree = "<group>"; };
 		93C6D03E1FE2040000C1088F /* MathFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C6D0411FE2040000C1088F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93C6D0431FE2040000C1088F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93C6D0431FE2040000C1088F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		93C6D0461FE2040000C1088F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93C6D0491FE2040000C1088F /* MathFacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MathFacts.xcdatamodel; sourceTree = "<group>"; };
 		93C6D04B1FE2040000C1088F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93C6D04E1FE2040000C1088F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93C6D0501FE2040000C1088F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93D6CFD92002A6F300EE0E70 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,9 +43,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93C42B331FEB398600E33BB8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93C6D0411FE2040000C1088F /* AppDelegate.swift */,
+				93C6D0501FE2040000C1088F /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		93C6D0351FE2040000C1088F = {
 			isa = PBXGroup;
 			children = (
+				93D6CFD92002A6F300EE0E70 /* Default-568h@2x.png */,
 				93C6D0401FE2040000C1088F /* MathFacts */,
 				93C6D03F1FE2040000C1088F /* Products */,
 			);
@@ -56,13 +72,14 @@
 		93C6D0401FE2040000C1088F /* MathFacts */ = {
 			isa = PBXGroup;
 			children = (
-				93C6D0411FE2040000C1088F /* AppDelegate.swift */,
-				93C6D0431FE2040000C1088F /* ViewController.swift */,
+				93C42B331FEB398600E33BB8 /* Supporting Files */,
+				93C6D0431FE2040000C1088F /* StartViewController.swift */,
 				93C6D0451FE2040000C1088F /* Main.storyboard */,
 				93C6D04B1FE2040000C1088F /* Assets.xcassets */,
 				93C6D04D1FE2040000C1088F /* LaunchScreen.storyboard */,
-				93C6D0501FE2040000C1088F /* Info.plist */,
 				93C6D0481FE2040000C1088F /* MathFacts.xcdatamodeld */,
+				93C42B2F1FEB0D9700E33BB8 /* FactViewController.swift */,
+				93C42B311FEB101400E33BB8 /* CelebrateViewController.swift */,
 			);
 			path = MathFacts;
 			sourceTree = "<group>";
@@ -127,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C6D04F1FE2040000C1088F /* LaunchScreen.storyboard in Resources */,
+				93D6CFDA2002A6F300EE0E70 /* Default-568h@2x.png in Resources */,
 				93C6D04C1FE2040000C1088F /* Assets.xcassets in Resources */,
 				93C6D0471FE2040000C1088F /* Main.storyboard in Resources */,
 			);
@@ -139,9 +157,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93C6D0441FE2040000C1088F /* ViewController.swift in Sources */,
+				93C6D0441FE2040000C1088F /* StartViewController.swift in Sources */,
 				93C6D0421FE2040000C1088F /* AppDelegate.swift in Sources */,
 				93C6D04A1FE2040000C1088F /* MathFacts.xcdatamodeld in Sources */,
+				93C42B301FEB0D9700E33BB8 /* FactViewController.swift in Sources */,
+				93C42B321FEB101400E33BB8 /* CelebrateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
