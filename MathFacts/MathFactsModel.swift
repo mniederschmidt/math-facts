@@ -10,6 +10,11 @@ import Foundation
 
 class MathFactsModel {
     
+    var add: Bool = false
+    var subtract: Bool = false
+    var multiply: Bool = false
+    var divide: Bool = false
+    
     enum FactType {
         case addition
         case subtraction
@@ -43,10 +48,18 @@ class MathFactsModel {
     init() {
 //        self.facts = []
         // Hard code for now
+        
         self.facts = [
             MathFact(factType: .addition, operand1: 3, operand2: 2, correctInARow: 0),
             MathFact(factType: .addition, operand1: 3, operand2: 3, correctInARow: 0)
         ]
+    }
+    
+    func reset() {
+        add = false
+        subtract = false
+        multiply = false
+        divide = false
     }
     
     func nextFact() -> MathFact {

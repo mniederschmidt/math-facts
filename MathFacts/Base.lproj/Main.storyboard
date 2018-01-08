@@ -6,7 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -23,39 +25,119 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAW-ex-zSk">
-                                <rect key="frame" x="141" y="448" width="92" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Review">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="w0q-SL-0wa">
-                                <rect key="frame" x="0.0" y="185.5" width="375" height="110"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JlD-rn-jHt">
+                                <rect key="frame" x="62.5" y="125" width="250" height="250"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VDC-OU-OLo">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="V1w-KD-lrZ" userLabel="Stack View 1">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="121"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHj-Qp-4dJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="121" height="121"/>
+                                                        <state key="normal" image="Plus"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xKM-D3-Rz9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLY-LM-aWr">
+                                                        <rect key="frame" x="129" y="0.0" width="121" height="121"/>
+                                                        <state key="normal" image="Minus"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="subtractButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="95r-Ff-YPK"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rU9-pB-sfh" userLabel="Stack View 2">
+                                                <rect key="frame" x="0.0" y="129" width="250" height="121"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo8-9L-p90">
+                                                        <rect key="frame" x="0.0" y="0.0" width="121" height="121"/>
+                                                        <state key="normal" image="Multiply"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="multiplyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJu-ek-cGG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MM-dX-r1P">
+                                                        <rect key="frame" x="129" y="0.0" width="121" height="121"/>
+                                                        <state key="normal" image="Divide"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="divideButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pGK-Gs-eph"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="rU9-pB-sfh" secondAttribute="bottom" id="IgD-7R-Tms"/>
+                                            <constraint firstItem="V1w-KD-lrZ" firstAttribute="centerX" secondItem="VDC-OU-OLo" secondAttribute="centerX" id="d5u-BO-HRY"/>
+                                            <constraint firstItem="V1w-KD-lrZ" firstAttribute="top" secondItem="VDC-OU-OLo" secondAttribute="top" id="jdd-N6-WFV"/>
+                                            <constraint firstItem="rU9-pB-sfh" firstAttribute="centerX" secondItem="VDC-OU-OLo" secondAttribute="centerX" id="mek-Bk-o8f"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="quY-zX-yx5"/>
+                                    <constraint firstAttribute="bottom" secondItem="VDC-OU-OLo" secondAttribute="bottom" id="3r2-y4-bCb"/>
+                                    <constraint firstAttribute="width" constant="250" id="7xT-dH-3Bn"/>
+                                    <constraint firstItem="VDC-OU-OLo" firstAttribute="leading" secondItem="JlD-rn-jHt" secondAttribute="leading" id="Lht-YD-H44"/>
+                                    <constraint firstAttribute="height" constant="250" id="aah-Hu-bfy"/>
+                                    <constraint firstAttribute="trailing" secondItem="VDC-OU-OLo" secondAttribute="trailing" id="elO-vc-m8M"/>
+                                    <constraint firstItem="VDC-OU-OLo" firstAttribute="top" secondItem="JlD-rn-jHt" secondAttribute="top" id="iMM-oG-k2k"/>
                                 </constraints>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBm-UY-ZrX">
-                                <rect key="frame" x="158" y="513" width="59" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBm-UY-ZrX">
+                                <rect key="frame" x="160.5" y="452.5" width="54" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Quiz">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="quizButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KMI-p4-udc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="w0q-SL-0wa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CvP-Fb-Cz6"/>
-                            <constraint firstItem="w0q-SL-0wa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-125" id="ITt-II-hKp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w0q-SL-0wa" secondAttribute="trailing" id="imp-8L-sHP"/>
+                            <constraint firstItem="CBm-UY-ZrX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0Nb-qK-6kv"/>
+                            <constraint firstItem="JlD-rn-jHt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LPa-6a-8YW"/>
+                            <constraint firstItem="JlD-rn-jHt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="6:8" id="cez-jZ-Aey"/>
+                            <constraint firstItem="JlD-rn-jHt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="fmj-fM-a3E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CBm-UY-ZrX" secondAttribute="bottom" priority="750" constant="169.5" id="gwf-wK-mK7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JlD-rn-jHt" secondAttribute="trailing" priority="750" constant="68" id="jfE-cU-jAk"/>
+                            <constraint firstItem="CBm-UY-ZrX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JlD-rn-jHt" secondAttribute="bottom" constant="25" id="lql-zJ-jkg"/>
+                            <constraint firstItem="JlD-rn-jHt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="68" id="tgT-y4-qie"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="0Rb-IV-hA3"/>
                     <connections>
+                        <outlet property="addButton" destination="OHj-Qp-4dJ" id="lDl-dF-hsQ"/>
+                        <outlet property="divideButton" destination="5MM-dX-r1P" id="IoK-ZE-aS5"/>
+                        <outlet property="multiplyButton" destination="mo8-9L-p90" id="jnU-AS-jgt"/>
+                        <outlet property="subtractButton" destination="VLY-LM-aWr" id="ifx-rH-aGK"/>
                         <segue destination="AJa-gP-EIa" kind="show" identifier="showFacts" id="Myc-sN-18P"/>
                     </connections>
                 </viewController>
@@ -104,7 +186,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="86"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="poe-GR-brM" userLabel="Feedback Image">
                                 <rect key="frame" x="245" y="433" width="114" height="115"/>
@@ -117,31 +199,59 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="AJa-gP-EIa" eventType="touchUpInside" id="Z8Y-CD-k4L"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="hDu-Yv-g6e"/>
                     </view>
                     <connections>
-                        <segue destination="Eqd-0e-Evq" kind="show" identifier="showCelebration" id="gdb-Ka-kWw"/>
+                        <segue destination="Kal-Vy-rCZ" kind="show" identifier="showCelebration" id="kYi-JU-UgF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GKe-PJ-Z7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1856.8" y="115.59220389805098"/>
         </scene>
-        <!--Celebrate View Controller-->
-        <scene sceneID="Mld-96-jTo">
+        <!--Celebration View Controller-->
+        <scene sceneID="9CU-8I-yfH">
             <objects>
-                <viewController id="Eqd-0e-Evq" customClass="CelebrateViewController" customModule="MathFacts" customModuleProvider="target" sceneMemberID="viewController">
-                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Pfm-zD-gVy">
+                <viewController id="Kal-Vy-rCZ" userLabel="Celebration View Controller" customClass="CelebrateViewController" customModule="MathFacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dob-1f-J8u" customClass="UIViewX" customModule="MathFacts" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Penguin" translatesAutoresizingMaskIntoConstraints="NO" id="eWR-Br-z9c">
+                                <rect key="frame" x="67" y="135" width="240" height="334"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You did it!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtw-DO-oso">
+                                <rect key="frame" x="73" y="484" width="229" height="55"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xtw-DO-oso" firstAttribute="top" secondItem="eWR-Br-z9c" secondAttribute="bottom" priority="750" constant="35" id="NQc-lf-g3c"/>
+                            <constraint firstItem="eWR-Br-z9c" firstAttribute="top" secondItem="1cZ-B7-7Tv" secondAttribute="top" constant="71" id="cbD-oo-xib"/>
+                            <constraint firstItem="xtw-DO-oso" firstAttribute="centerX" secondItem="1cZ-B7-7Tv" secondAttribute="centerX" id="lAz-LR-CGo"/>
+                            <constraint firstItem="eWR-Br-z9c" firstAttribute="centerX" secondItem="xtw-DO-oso" secondAttribute="centerX" id="oJJ-7W-tgb"/>
+                            <constraint firstItem="xtw-DO-oso" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eWR-Br-z9c" secondAttribute="bottom" constant="15" id="oTk-20-k55"/>
+                            <constraint firstItem="xtw-DO-oso" firstAttribute="centerY" secondItem="1cZ-B7-7Tv" secondAttribute="centerY" multiplier="14:10" id="vmH-K0-UIy"/>
+                            <constraint firstItem="eWR-Br-z9c" firstAttribute="leading" secondItem="1cZ-B7-7Tv" secondAttribute="leading" constant="67" id="wGx-ei-vzT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1cZ-B7-7Tv"/>
+                    </view>
+                    <connections>
+                        <outlet property="gradientView" destination="dob-1f-J8u" id="LU2-32-kQb"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mVa-qx-LaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XCn-NS-VJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2714" y="116"/>
+            <point key="canvasLocation" x="2653.5999999999999" y="115.59220389805098"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hvv-5w-Giv">
@@ -162,4 +272,11 @@
             <point key="canvasLocation" x="116.8" y="116.94152923538232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Divide" width="155" height="153"/>
+        <image name="Minus" width="155" height="153"/>
+        <image name="Multiply" width="155" height="154"/>
+        <image name="Penguin" width="300" height="402"/>
+        <image name="Plus" width="155" height="154"/>
+    </resources>
 </document>

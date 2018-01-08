@@ -15,6 +15,10 @@ class FactViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "showCelebration", sender: self)
+    }
 
     /*
     // MARK: - Navigation

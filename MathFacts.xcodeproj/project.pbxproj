@@ -18,6 +18,7 @@
 		93D6CFDA2002A6F300EE0E70 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D6CFD92002A6F300EE0E70 /* Default-568h@2x.png */; };
 		93D6CFDC2002D58600EE0E70 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFDB2002D58600EE0E70 /* MainView.swift */; };
 		93D6CFDE2002D65700EE0E70 /* MathFactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFDD2002D65700EE0E70 /* MathFactsModel.swift */; };
+		93D6CFE020034C7200EE0E70 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFDF20034C7200EE0E70 /* UIViewX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		93D6CFD92002A6F300EE0E70 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		93D6CFDB2002D58600EE0E70 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		93D6CFDD2002D65700EE0E70 /* MathFactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFactsModel.swift; sourceTree = "<group>"; };
+		93D6CFDF20034C7200EE0E70 /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				93C42B2F1FEB0D9700E33BB8 /* FactViewController.swift */,
 				93C42B311FEB101400E33BB8 /* CelebrateViewController.swift */,
 				93C42B331FEB398600E33BB8 /* Supporting Files */,
+				93D6CFDF20034C7200EE0E70 /* UIViewX.swift */,
 			);
 			path = MathFacts;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C6D0441FE2040000C1088F /* MainViewController.swift in Sources */,
+				93D6CFE020034C7200EE0E70 /* UIViewX.swift in Sources */,
 				93C6D0421FE2040000C1088F /* AppDelegate.swift in Sources */,
 				93C6D04A1FE2040000C1088F /* MathFacts.xcdatamodeld in Sources */,
 				93D6CFDE2002D65700EE0E70 /* MathFactsModel.swift in Sources */,
@@ -307,7 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MathFacts/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MathFacts/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.launchcode.MathFacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -321,7 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MathFacts/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MathFacts/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.launchcode.MathFacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";

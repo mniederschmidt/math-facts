@@ -8,8 +8,19 @@
 
 import UIKit
 
+protocol MainViewDelegate: class {
+    func quizButtonPressed()
+}
+
 class MainView: UIView {
-
-
     
+    // MARK: Properties
+    var add: Bool = false
+    var subtract: Bool = false
+    var multiply: Bool = false
+    var divide: Bool = false
+
+    weak var delegate: MainViewDelegate?
+    
+
 }
