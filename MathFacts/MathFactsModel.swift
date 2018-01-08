@@ -8,6 +8,13 @@
 
 import Foundation
 
+//enum FactType {
+//    case addition
+//    case subtraction
+//    case multiplication
+//    case division
+//}
+
 class MathFactsModel {
     
     var add: Bool = false
@@ -20,26 +27,6 @@ class MathFactsModel {
         case subtraction
         case multiplication
         case division
-    }
-    
-    struct MathFact {
-        let factType: FactType
-        let operand1: Int
-        let operand2: Int
-        var correctInARow: Int
-        
-        func result() -> Int {
-            switch factType {
-            case .addition:
-                return operand1 + operand2
-            case .subtraction:
-                return operand1 - operand2
-            case .multiplication:
-                return operand1 * operand2
-            case .division:
-                return operand1 / operand2
-            }
-        }
     }
     
     let facts: [MathFact]

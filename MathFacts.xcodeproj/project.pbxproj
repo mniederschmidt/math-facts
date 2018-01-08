@@ -19,6 +19,7 @@
 		93D6CFDC2002D58600EE0E70 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFDB2002D58600EE0E70 /* MainView.swift */; };
 		93D6CFDE2002D65700EE0E70 /* MathFactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFDD2002D65700EE0E70 /* MathFactsModel.swift */; };
 		93D6CFE020034C7200EE0E70 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFDF20034C7200EE0E70 /* UIViewX.swift */; };
+		93D6CFE22003E65800EE0E70 /* MathFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFE12003E65800EE0E70 /* MathFact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		93D6CFDB2002D58600EE0E70 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		93D6CFDD2002D65700EE0E70 /* MathFactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFactsModel.swift; sourceTree = "<group>"; };
 		93D6CFDF20034C7200EE0E70 /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
+		93D6CFE12003E65800EE0E70 /* MathFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				93C6D0481FE2040000C1088F /* MathFacts.xcdatamodeld */,
 				93C6D0431FE2040000C1088F /* MainViewController.swift */,
 				93D6CFDD2002D65700EE0E70 /* MathFactsModel.swift */,
+				93D6CFE12003E65800EE0E70 /* MathFact.swift */,
 				93D6CFDB2002D58600EE0E70 /* MainView.swift */,
 				93C42B2F1FEB0D9700E33BB8 /* FactViewController.swift */,
 				93C42B311FEB101400E33BB8 /* CelebrateViewController.swift */,
@@ -172,6 +175,7 @@
 				93C6D04A1FE2040000C1088F /* MathFacts.xcdatamodeld in Sources */,
 				93D6CFDE2002D65700EE0E70 /* MathFactsModel.swift in Sources */,
 				93D6CFDC2002D58600EE0E70 /* MainView.swift in Sources */,
+				93D6CFE22003E65800EE0E70 /* MathFact.swift in Sources */,
 				93C42B301FEB0D9700E33BB8 /* FactViewController.swift in Sources */,
 				93C42B321FEB101400E33BB8 /* CelebrateViewController.swift in Sources */,
 			);

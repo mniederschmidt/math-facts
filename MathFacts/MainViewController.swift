@@ -55,5 +55,12 @@ class MainViewController: UIViewController {
     @IBAction func quizButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "showFacts", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showFacts" {
+            let controller = segue.destination as! FactViewController
+            controller.mathFactsModel = mathFactsModel
+        }
+    }
 }
 
