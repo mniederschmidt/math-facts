@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct MathFact {
+struct DMMathFact {
     let factType: MathFactsModel.FactType
-    let operand1: Int
-    let operand2: Int
+    let operand1: Int32
+    let operand2: Int32
     var correctInARow: Int
     
-    func result() -> Int {
+    func result() -> Int32 {
         switch factType {
         case .addition:
             return operand1 + operand2
@@ -36,7 +36,7 @@ struct MathFact {
         case .multiplication:
             return "x"
         case .division:
-            return "/"
+            return "÷"
         }
     }
 }

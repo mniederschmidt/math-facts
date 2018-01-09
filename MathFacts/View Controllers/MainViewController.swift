@@ -10,6 +10,9 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    let session = ApplicationSession()
+    var mathFactsModel: MathFactsModel?
+
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var subtractButton: UIButton!
     @IBOutlet weak var multiplyButton: UIButton!
@@ -19,8 +22,6 @@ class MainViewController: UIViewController {
 //        return view as! MainView
 //    }
     
-    var mathFactsModel: MathFactsModel?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +29,7 @@ class MainViewController: UIViewController {
         mathFactsModel = MathFactsModel()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         mathFactsModel?.reset()
     }
 
