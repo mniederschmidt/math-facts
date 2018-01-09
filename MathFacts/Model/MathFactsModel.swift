@@ -26,7 +26,7 @@ class MathFactsModel {
         case addition = "+"
         case subtraction = "-"
         case multiplication = "x"
-        case division = "/"
+        case division = "÷"
     }
     
     let facts: [DMMathFact]

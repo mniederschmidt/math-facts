@@ -28,15 +28,19 @@ class FactViewController: UIViewController {
         checkFact()
     }
     
-    func showNextFact() {
+    func showNext() {
         // If all facts have been mastered, show celebration screen
         if let allFactsMastered: Bool = mathFactsModel?.allFactsMastered() {
             if allFactsMastered {
                 performSegue(withIdentifier: "showCelebration", sender: self)
                 return
+            } else {
+                showNextFact()
             }
         }
-        
+    }
+    
+    func showNextFact() {
         mathFact = mathFactsModel?.nextFact()
         
         if let num1: Int32 = mathFact?.operand1,
@@ -63,7 +67,7 @@ class FactViewController: UIViewController {
                 UIView.animate(withDuration: 1.8, delay: 0.5, options: [.curveEaseOut], animations: {
                     self.answerFeedback.alpha = 1
                 }, completion: {(finished: Bool) in
-                    self.showNextFact()
+                    self.showNext()
                 })
             } else {
                 // display X and stay

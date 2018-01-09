@@ -22,6 +22,16 @@
 		93D6CFE22003E65800EE0E70 /* MathFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFE12003E65800EE0E70 /* MathFact.swift */; };
 		93D6CFE520041D8300EE0E70 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFE420041D8300EE0E70 /* CoreDataManager.swift */; };
 		93D6CFE72004479F00EE0E70 /* ApplicationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFE62004479F00EE0E70 /* ApplicationSession.swift */; };
+		93D6CFED200530CE00EE0E70 /* FactsPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFEC200530CE00EE0E70 /* FactsPersistence.swift */; };
+		93D6CFEF2005313700EE0E70 /* UserPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFEE2005313700EE0E70 /* UserPersistence.swift */; };
+		93D6CFFA2005331E00EE0E70 /* MathFact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFF22005331E00EE0E70 /* MathFact+CoreDataClass.swift */; };
+		93D6CFFB2005331E00EE0E70 /* MathFact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFF32005331E00EE0E70 /* MathFact+CoreDataProperties.swift */; };
+		93D6CFFC2005331E00EE0E70 /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFF42005331E00EE0E70 /* Student+CoreDataClass.swift */; };
+		93D6CFFD2005331E00EE0E70 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFF52005331E00EE0E70 /* Student+CoreDataProperties.swift */; };
+		93D6CFFE2005331E00EE0E70 /* StudentFact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFF62005331E00EE0E70 /* StudentFact+CoreDataClass.swift */; };
+		93D6CFFF2005331E00EE0E70 /* StudentFact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFF72005331E00EE0E70 /* StudentFact+CoreDataProperties.swift */; };
+		93D6D0002005331E00EE0E70 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFF82005331E00EE0E70 /* User+CoreDataClass.swift */; };
+		93D6D0012005331E00EE0E70 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6CFF92005331E00EE0E70 /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +52,16 @@
 		93D6CFE12003E65800EE0E70 /* MathFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFact.swift; sourceTree = "<group>"; };
 		93D6CFE420041D8300EE0E70 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		93D6CFE62004479F00EE0E70 /* ApplicationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSession.swift; sourceTree = "<group>"; };
+		93D6CFEC200530CE00EE0E70 /* FactsPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsPersistence.swift; sourceTree = "<group>"; };
+		93D6CFEE2005313700EE0E70 /* UserPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPersistence.swift; sourceTree = "<group>"; };
+		93D6CFF22005331E00EE0E70 /* MathFact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathFact+CoreDataClass.swift"; sourceTree = "<group>"; };
+		93D6CFF32005331E00EE0E70 /* MathFact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathFact+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		93D6CFF42005331E00EE0E70 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataClass.swift"; sourceTree = "<group>"; };
+		93D6CFF52005331E00EE0E70 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		93D6CFF62005331E00EE0E70 /* StudentFact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentFact+CoreDataClass.swift"; sourceTree = "<group>"; };
+		93D6CFF72005331E00EE0E70 /* StudentFact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentFact+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		93D6CFF82005331E00EE0E70 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		93D6CFF92005331E00EE0E70 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +119,12 @@
 		93D6CFE320041D5000EE0E70 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				93D6CFF12005324C00EE0E70 /* Classes */,
+				93D6CFF02005323E00EE0E70 /* Properties */,
 				93C6D0481FE2040000C1088F /* MathFacts.xcdatamodeld */,
 				93D6CFE420041D8300EE0E70 /* CoreDataManager.swift */,
+				93D6CFEC200530CE00EE0E70 /* FactsPersistence.swift */,
+				93D6CFEE2005313700EE0E70 /* UserPersistence.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -140,6 +164,28 @@
 				93D6CFE12003E65800EE0E70 /* MathFact.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		93D6CFF02005323E00EE0E70 /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				93D6CFF32005331E00EE0E70 /* MathFact+CoreDataProperties.swift */,
+				93D6CFF52005331E00EE0E70 /* Student+CoreDataProperties.swift */,
+				93D6CFF72005331E00EE0E70 /* StudentFact+CoreDataProperties.swift */,
+				93D6CFF92005331E00EE0E70 /* User+CoreDataProperties.swift */,
+			);
+			path = Properties;
+			sourceTree = "<group>";
+		};
+		93D6CFF12005324C00EE0E70 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				93D6CFF22005331E00EE0E70 /* MathFact+CoreDataClass.swift */,
+				93D6CFF42005331E00EE0E70 /* Student+CoreDataClass.swift */,
+				93D6CFF62005331E00EE0E70 /* StudentFact+CoreDataClass.swift */,
+				93D6CFF82005331E00EE0E70 /* User+CoreDataClass.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,17 +261,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D6CFFF2005331E00EE0E70 /* StudentFact+CoreDataProperties.swift in Sources */,
 				93C6D0441FE2040000C1088F /* MainViewController.swift in Sources */,
+				93D6CFFC2005331E00EE0E70 /* Student+CoreDataClass.swift in Sources */,
 				93D6CFE020034C7200EE0E70 /* UIViewX.swift in Sources */,
 				93C6D0421FE2040000C1088F /* AppDelegate.swift in Sources */,
+				93D6CFFA2005331E00EE0E70 /* MathFact+CoreDataClass.swift in Sources */,
 				93C6D04A1FE2040000C1088F /* MathFacts.xcdatamodeld in Sources */,
 				93D6CFDE2002D65700EE0E70 /* MathFactsModel.swift in Sources */,
+				93D6CFFD2005331E00EE0E70 /* Student+CoreDataProperties.swift in Sources */,
+				93D6CFFB2005331E00EE0E70 /* MathFact+CoreDataProperties.swift in Sources */,
 				93D6CFDC2002D58600EE0E70 /* MainView.swift in Sources */,
 				93D6CFE22003E65800EE0E70 /* MathFact.swift in Sources */,
 				93C42B301FEB0D9700E33BB8 /* FactViewController.swift in Sources */,
 				93D6CFE520041D8300EE0E70 /* CoreDataManager.swift in Sources */,
+				93D6D0002005331E00EE0E70 /* User+CoreDataClass.swift in Sources */,
+				93D6CFFE2005331E00EE0E70 /* StudentFact+CoreDataClass.swift in Sources */,
 				93C42B321FEB101400E33BB8 /* CelebrateViewController.swift in Sources */,
+				93D6D0012005331E00EE0E70 /* User+CoreDataProperties.swift in Sources */,
 				93D6CFE72004479F00EE0E70 /* ApplicationSession.swift in Sources */,
+				93D6CFEF2005313700EE0E70 /* UserPersistence.swift in Sources */,
+				93D6CFED200530CE00EE0E70 /* FactsPersistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

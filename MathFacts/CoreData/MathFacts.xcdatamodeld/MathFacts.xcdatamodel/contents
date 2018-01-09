@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13528" systemVersion="16G1114" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="MathFact" representedClassName="MathFact" syncable="YES" codeGenerationType="class">
+    <entity name="MathFact" representedClassName="MathFact" syncable="YES">
         <attribute name="operand1" attributeType="Integer 32" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="operand2" attributeType="Integer 32" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="operation" attributeType="String" syncable="YES"/>
         <relationship name="studentFacts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StudentFact" inverseName="mathFact" inverseEntity="StudentFact" syncable="YES"/>
     </entity>
-    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+    <entity name="Student" representedClassName="Student" syncable="YES">
         <attribute name="firstName" attributeType="String" syncable="YES"/>
         <attribute name="imageFileName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastName" attributeType="String" syncable="YES"/>
         <attribute name="maxNum" optional="YES" attributeType="Integer 32" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="preferredName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeSetting" optional="YES" attributeType="Float" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="studentFacts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StudentFact" inverseName="student" inverseEntity="StudentFact" syncable="YES"/>
+        <relationship name="studentFacts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StudentFact" inverseName="student" inverseEntity="StudentFact" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="students" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="StudentFact" representedClassName="StudentFact" syncable="YES" codeGenerationType="class">
+    <entity name="StudentFact" representedClassName="StudentFact" syncable="YES">
         <attribute name="correctInARow" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="mathFact" maxCount="1" deletionRule="Nullify" destinationEntity="MathFact" inverseName="studentFacts" inverseEntity="MathFact" syncable="YES"/>
         <relationship name="student" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="studentFacts" inverseEntity="Student" syncable="YES"/>
     </entity>
-    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+    <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="username" attributeType="String" syncable="YES"/>
         <relationship name="students" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Student" inverseName="user" inverseEntity="Student" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-207" positionY="-81" width="128" height="88"/>
-        <element name="Student" positionX="-207" positionY="45" width="128" height="163"/>
-        <element name="StudentFact" positionX="-20" positionY="9" width="128" height="88"/>
         <element name="MathFact" positionX="133" positionY="-81" width="128" height="103"/>
+        <element name="Student" positionX="-207" positionY="36" width="128" height="163"/>
+        <element name="StudentFact" positionX="-20" positionY="9" width="128" height="88"/>
+        <element name="User" positionX="-207" positionY="-99" width="128" height="103"/>
     </elements>
 </model>
