@@ -54,7 +54,7 @@ class CelebrateViewController: UIViewController {
             self.gradientView.secondColor = self.colorArray[self.currentColorArrayIndex].color2
             self.gradientView.horizontalGradient = true
         }) { (success) in
-            // completion block:  after successfully complete, make recursive call to self
+            // completion block: after successfully complete, make recursive call to self
             self.animateBackgroundColor()
         }
     }

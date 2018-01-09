@@ -16,7 +16,6 @@ class FactViewController: UIViewController {
     @IBOutlet weak var answer: UITextField!
     @IBOutlet weak var answerFeedback: UIImageView!
     
-//    var mathFact: MathFact
     var mathFactsModel: MathFactsModel?
     var mathFact: DMMathFact?
 
@@ -26,17 +25,18 @@ class FactViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-//        if factCorrect() {
-//            if allFactsMastered() {
-//                performSegue(withIdentifier: "showCelebration", sender: self)
-//            } else {
-//                showNextFact()
-//            }
-//        }
         checkFact()
     }
     
     func showNextFact() {
+        // If all facts have been mastered, show celebration screen
+        if let allFactsMastered: Bool = mathFactsModel?.allFactsMastered() {
+            if allFactsMastered {
+                performSegue(withIdentifier: "showCelebration", sender: self)
+                return
+            }
+        }
+        
         mathFact = mathFactsModel?.nextFact()
         
         if let num1: Int32 = mathFact?.operand1,
@@ -60,37 +60,15 @@ class FactViewController: UIViewController {
                 // display check mark and animate
                 answerFeedback.alpha = 0
                 answerFeedback.image = #imageLiteral(resourceName: "GreenCheckMark")
-                UIView.animate(withDuration: 1.5, delay: 0.5, options: [.curveEaseOut], animations: {
+                UIView.animate(withDuration: 1.8, delay: 0.5, options: [.curveEaseOut], animations: {
                     self.answerFeedback.alpha = 1
                 }, completion: {(finished: Bool) in
-                    if (self.mathFactsModel?.allFactsMastered())! {
-                        self.performSegue(withIdentifier: "showCelebration", sender: self)
-                    } else {
-                        self.showNextFact()
-                    }
+                    self.showNextFact()
                 })
             } else {
                 // display X and stay
                 answerFeedback.image = #imageLiteral(resourceName: "Wrong")
             }
-            // TODO: Figure out what to do if no answer or answer not numeric
-//        } else {
-//            return false
         }
     }
-    
-//    // TODO:  Return true if array size of facts to learn is 0
-//    func allFactsMastered() -> Bool {
-//        return false
-//    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

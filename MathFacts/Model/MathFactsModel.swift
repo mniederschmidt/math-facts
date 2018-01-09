@@ -37,9 +37,7 @@ class MathFactsModel {
     }
             
     static func createFacts() -> [DMMathFact] {
-        //        self.facts = []
         // Hard code for now
-
         return [
             DMMathFact(factType: .addition, operand1: 3, operand2: 2, correctInARow: 0),
             DMMathFact(factType: .addition, operand1: 3, operand2: 3, correctInARow: 0),
