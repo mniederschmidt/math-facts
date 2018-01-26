@@ -1,21 +1,12 @@
-//
-//  MathFactsModel.swift
-//  MathFacts
-//
-//  Created by Mary Niederschmidt on 1/6/18.
-//  Copyright © 2018 Mary Niederschmidt. All rights reserved.
-//
-
 import Foundation
 
-//enum FactType {
-//    case addition
-//    case subtraction
-//    case multiplication
-//    case division
-//}
-
 class MathFactsModel {
+
+    // TODO:  Eventually, should this array hold StudentFact objects?
+    var facts: [MathFact] = []
+    let factsPersistence: FactsPersistence
+//    let student: Student?
+    var currFactIndex: Int = -1
     
     var add: Bool = false
     var subtract: Bool = false
@@ -29,21 +20,22 @@ class MathFactsModel {
         case division = "÷"
     }
     
-    let facts: [DMMathFact]
-    var currFactIndex: Int = -1
-    
-    init() {
-        self.facts = MathFactsModel.createFacts()
+//    init(factsPersistence: FactsPersistence, student: Student) {
+    init(factsPersistence: FactsPersistence) {
+        self.factsPersistence = factsPersistence
+//        self.student = student
+        self.facts = createFacts()
+        // TODO:  Figure out how to populate Facts
     }
             
-    static func createFacts() -> [DMMathFact] {
-        // Hard code for now
+    func createFacts() -> [MathFact] {
+//        // Hard code for now
         return [
-            DMMathFact(factType: .addition, operand1: 3, operand2: 2, correctInARow: 0),
-            DMMathFact(factType: .addition, operand1: 3, operand2: 3, correctInARow: 0),
-            DMMathFact(factType: .addition, operand1: 3, operand2: 5, correctInARow: 0),
-            DMMathFact(factType: .addition, operand1: 3, operand2: 8, correctInARow: 0),
-            DMMathFact(factType: .addition, operand1: 3, operand2: 7, correctInARow: 0)
+            MathFact(factType: .addition, operand1: 3, operand2: 2, correctInARow: 0),
+            MathFact(factType: .addition, operand1: 3, operand2: 3, correctInARow: 0),
+            MathFact(factType: .addition, operand1: 3, operand2: 5, correctInARow: 0),
+            MathFact(factType: .addition, operand1: 3, operand2: 8, correctInARow: 0),
+            MathFact(factType: .addition, operand1: 3, operand2: 7, correctInARow: 0)
         ]
     }
     
@@ -55,17 +47,23 @@ class MathFactsModel {
         currFactIndex = -1
     }
     
-    func nextFact() -> DMMathFact {
-        currFactIndex = currFactIndex + 1
-        return facts[currFactIndex]
+    func nextFact() -> MathFact {
+//        currFactIndex = currFactIndex + 1
+//        return facts[currFactIndex]
+        return facts[randomIndex()]
     }
     
     func allFactsMastered() -> Bool {
-        if currFactIndex >= facts.count - 1 {
+//        if facts.count == 0 {
+        if facts.isEmpty {
             return true
         } else {
             return false
         }
+    }
+    
+    func randomIndex() -> Int {
+        return Int(arc4random_uniform(UInt32(facts.count)))
     }
 }
 

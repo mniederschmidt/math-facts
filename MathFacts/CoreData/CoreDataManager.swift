@@ -1,11 +1,3 @@
-//
-//  CoreDataManager.swift
-//  MathFacts
-//
-//  Created by Mary Niederschmidt on 1/8/18.
-//  Copyright © 2018 Mary Niederschmidt. All rights reserved.
-//
-
 import Foundation
 import CoreData
 
@@ -19,6 +11,8 @@ class CoreDataManager {
      */
         let container = NSPersistentContainer(name: "MathFacts")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            // This next line is in his example code, not sure why or if it's needed to work?
+//            let desc: NSPersistentStoreDescription = storeDescription
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
@@ -34,8 +28,14 @@ class CoreDataManager {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+        // This will print out the location of the sqlite database
+        print(container.persistentStoreDescriptions.first?.url)
         return container
     }()
+    
+    var viewContext: NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
 
     // MARK: - Core Data Saving support
 

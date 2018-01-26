@@ -1,14 +1,6 @@
-//
-//  MainViewController.swift
-//  MathFacts
-//
-//  Created by Mary Niederschmidt on 12/13/17.
-//  Copyright © 2017 Mary Niederschmidt. All rights reserved.
-//
-
 import UIKit
 
-class MainViewController: UIViewController {
+class MathFactsViewController: UIViewController {
 
     let session = ApplicationSession()
     var mathFactsModel: MathFactsModel?
@@ -24,9 +16,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 //        mainView.delegate = self
-        mathFactsModel = MathFactsModel()
+        mathFactsModel = MathFactsModel(factsPersistence: session.mathFactsPersistence)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,8 +25,19 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func addButtonPressed(_ sender: UIButton) {
-        sender.isSelected = true
-        mathFactsModel?.add = true
+        if addButton.isSelected == true {
+            addButton.isSelected = false
+            mathFactsModel?.add = false
+//            let darkBlur = UIBlurEffect(style: <#T##UIBlurEffectStyle#>)
+//            addButton.currentImage?.cgImage?.alphaInfo
+//            addButton.isHighlighted = false
+        } else {
+            addButton.isSelected = true
+            mathFactsModel?.add = true
+//            addButton.isHighlighted = true
+        }
+//        sender.isSelected = true
+//        mathFactsModel?.add = true
     }
 
     @IBAction func subtractButtonPressed(_ sender: UIButton) {

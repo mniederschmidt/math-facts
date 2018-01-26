@@ -1,20 +1,12 @@
-//
-//  MathFact.swift
-//  MathFacts
-//
-//  Created by Mary Niederschmidt on 1/8/18.
-//  Copyright © 2018 Mary Niederschmidt. All rights reserved.
-//
-
 import Foundation
 
-struct DMMathFact {
+struct MathFact {
     let factType: MathFactsModel.FactType
-    let operand1: Int32
-    let operand2: Int32
+    let operand1: Int
+    let operand2: Int
     var correctInARow: Int
     
-    func result() -> Int32 {
+    func result() -> Int {
         switch factType {
         case .addition:
             return operand1 + operand2

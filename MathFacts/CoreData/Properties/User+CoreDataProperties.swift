@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  MathFacts
 //
-//  Created by Mary Niederschmidt on 1/9/18.
+//  Created by Mary Niederschmidt on 1/22/18.
 //  Copyright © 2018 Mary Niederschmidt. All rights reserved.
 //
 //
@@ -17,10 +17,10 @@ extension User {
         return NSFetchRequest<User>(entityName: "User")
     }
 
-    @NSManaged public var email: String?
+    @NSManaged public var email: String
     @NSManaged public var password: NSData?
-    @NSManaged public var username: String?
-    @NSManaged public var students: NSSet?
+    @NSManaged public var username: String
+    @NSManaged public var students: Set<Student>
 
 }
 
@@ -34,9 +34,9 @@ extension User {
     @NSManaged public func removeFromStudents(_ value: Student)
 
     @objc(addStudents:)
-    @NSManaged public func addToStudents(_ values: NSSet)
+    @NSManaged public func addToStudents(_ values: Set<Student>)
 
     @objc(removeStudents:)
-    @NSManaged public func removeFromStudents(_ values: NSSet)
+    @NSManaged public func removeFromStudents(_ values: Set<Student>)
 
 }

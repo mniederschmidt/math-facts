@@ -17,8 +17,9 @@ class FactViewController: UIViewController {
     @IBOutlet weak var answerFeedback: UIImageView!
     
     var mathFactsModel: MathFactsModel?
-    var mathFact: DMMathFact?
-
+    var mathFact: MathFact?
+//    var mathFact: StudentFact?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showNextFact()
@@ -43,8 +44,8 @@ class FactViewController: UIViewController {
     func showNextFact() {
         mathFact = mathFactsModel?.nextFact()
         
-        if let num1: Int32 = mathFact?.operand1,
-           let num2: Int32 = mathFact?.operand2 {
+        if let num1 = mathFact?.operand1,
+           let num2 = mathFact?.operand2 {
             operand1.text = String(describing: num1)
             operand2.text = String(describing: num2)
         } else {
@@ -52,15 +53,19 @@ class FactViewController: UIViewController {
             operand2.text = nil
         }
         
-        mathSign.text = mathFact?.sign()
+        // TODO: Fix this
+//        mathSign.text = mathFact?.operation
         answer.text = nil
         answerFeedback.image = nil
     }
     
     func checkFact() {
         if let currentAnswer: String = answer.text,
-            let currentAnswerNum: Int32 = Int32(currentAnswer) {
-            if currentAnswerNum == mathFact?.result() {
+            let currentAnswerNum: Int16 = Int16(currentAnswer) {
+            // TODO: Fix this
+            //       Figure out how to handle computed result in core data - use struct, or add to core data classes?
+//            if currentAnswerNum == mathFact?.result() {
+            if currentAnswerNum == 2 {
                 // display check mark and animate
                 answerFeedback.alpha = 0
                 answerFeedback.image = #imageLiteral(resourceName: "GreenCheckMark")
