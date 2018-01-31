@@ -1,9 +1,13 @@
 import UIKit
 
-class StudentsViewController: UIViewController {
+protocol LoginViewControllerDelegate: class {
+    func loginButtonPressed()
+    func usernameUpdated(to userName: String?)
+}
+
+class LoginViewController: UIViewController {
     
-    var session: ApplicationSession!
-    var model: MathFactsModel!
+    weak var delegate: LoginViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,6 +15,11 @@ class StudentsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
 
     /*
     // MARK: - Navigation

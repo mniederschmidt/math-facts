@@ -1,9 +1,14 @@
+//
+//  CreateUserViewController.swift
+//  MathFacts
+//
+//  Created by Mary Niederschmidt on 1/27/18.
+//  Copyright © 2018 Mary Niederschmidt. All rights reserved.
+//
+
 import UIKit
 
-class StudentsViewController: UIViewController {
-    
-    var session: ApplicationSession!
-    var model: MathFactsModel!
+class CreateUserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,6 +16,11 @@ class StudentsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
 
     /*
     // MARK: - Navigation

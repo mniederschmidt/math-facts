@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		931D4328201D103700075BF6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 931D4327201D103700075BF6 /* Login.storyboard */; };
+		931D432A201D10C600075BF6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D4329201D10C600075BF6 /* LoginViewController.swift */; };
+		931D432C201D10E200075BF6 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D432B201D10E200075BF6 /* CreateUserViewController.swift */; };
+		931D432E201FBEA500075BF6 /* UIViewControllerExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D432D201FBEA500075BF6 /* UIViewControllerExtensionViewController.swift */; };
+		931D4330201FBEFD00075BF6 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D432F201FBEFD00075BF6 /* UIViewExtension.swift */; };
 		93C42B301FEB0D9700E33BB8 /* FactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C42B2F1FEB0D9700E33BB8 /* FactViewController.swift */; };
 		93C42B321FEB101400E33BB8 /* CelebrateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C42B311FEB101400E33BB8 /* CelebrateViewController.swift */; };
 		93C6D0421FE2040000C1088F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6D0411FE2040000C1088F /* AppDelegate.swift */; };
@@ -40,6 +45,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		931D4325201D0FAD00075BF6 /* MRF Silverplume.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MRF Silverplume.ttf"; path = "../../../../../Downloads/mrf_silverplume/MRF Silverplume.ttf"; sourceTree = "<group>"; };
+		931D4327201D103700075BF6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		931D4329201D10C600075BF6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		931D432B201D10E200075BF6 /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		931D432D201FBEA500075BF6 /* UIViewControllerExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionViewController.swift; sourceTree = "<group>"; };
+		931D432F201FBEFD00075BF6 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		93C42B2F1FEB0D9700E33BB8 /* FactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewController.swift; sourceTree = "<group>"; };
 		93C42B311FEB101400E33BB8 /* CelebrateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrateViewController.swift; sourceTree = "<group>"; };
 		93C6D03E1FE2040000C1088F /* MathFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,9 +96,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		931D4326201D0FD900075BF6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				931D4327201D103700075BF6 /* Login.storyboard */,
+				931D432B201D10E200075BF6 /* CreateUserViewController.swift */,
+				931D4329201D10C600075BF6 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		93C42B331FEB398600E33BB8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				931D4325201D0FAD00075BF6 /* MRF Silverplume.ttf */,
 				93C6D04D1FE2040000C1088F /* LaunchScreen.storyboard */,
 				93C6D04B1FE2040000C1088F /* Assets.xcassets */,
 				93D6CFD92002A6F300EE0E70 /* Default-568h@2x.png */,
@@ -116,6 +138,7 @@
 		93C6D0401FE2040000C1088F /* MathFacts */ = {
 			isa = PBXGroup;
 			children = (
+				931D4326201D0FD900075BF6 /* Login */,
 				93D6D0022006707B00EE0E70 /* Extensions */,
 				93D6CFE82004486500EE0E70 /* Main */,
 				93D6CFE9200448E900EE0E70 /* View Controllers */,
@@ -207,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				93D6D0032006709800EE0E70 /* StringExtension.swift */,
+				931D432F201FBEFD00075BF6 /* UIViewExtension.swift */,
+				931D432D201FBEA500075BF6 /* UIViewControllerExtensionViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -272,6 +297,7 @@
 			files = (
 				93C6D04F1FE2040000C1088F /* LaunchScreen.storyboard in Resources */,
 				93F432782016821C004C683A /* Main.storyboard in Resources */,
+				931D4328201D103700075BF6 /* Login.storyboard in Resources */,
 				93D6CFDA2002A6F300EE0E70 /* Default-568h@2x.png in Resources */,
 				93C6D04C1FE2040000C1088F /* Assets.xcassets in Resources */,
 				93C6D0471FE2040000C1088F /* StudentFacts.storyboard in Resources */,
@@ -299,16 +325,20 @@
 				93D6D00F2016515B00EE0E70 /* Student+CoreDataClass.swift in Sources */,
 				93D6CFE22003E65800EE0E70 /* MathFact.swift in Sources */,
 				93F4327E201A9F21004C683A /* StudentViewController.swift in Sources */,
+				931D432C201D10E200075BF6 /* CreateUserViewController.swift in Sources */,
 				93C42B301FEB0D9700E33BB8 /* FactViewController.swift in Sources */,
 				93D6CFE520041D8300EE0E70 /* CoreDataManager.swift in Sources */,
 				93C42B321FEB101400E33BB8 /* CelebrateViewController.swift in Sources */,
 				93D6CFE72004479F00EE0E70 /* ApplicationSession.swift in Sources */,
 				93D6D0112016515B00EE0E70 /* User+CoreDataClass.swift in Sources */,
 				93D6D006200C4D3300EE0E70 /* StudentPersistence.swift in Sources */,
+				931D432E201FBEA500075BF6 /* UIViewControllerExtensionViewController.swift in Sources */,
 				93D6CFEF2005313700EE0E70 /* UserPersistence.swift in Sources */,
 				93D6D0122016515B00EE0E70 /* User+CoreDataProperties.swift in Sources */,
+				931D4330201FBEFD00075BF6 /* UIViewExtension.swift in Sources */,
 				93D6D0042006709800EE0E70 /* StringExtension.swift in Sources */,
 				93D6D00E2016515B00EE0E70 /* StudentFact+CoreDataProperties.swift in Sources */,
+				931D432A201D10C600075BF6 /* LoginViewController.swift in Sources */,
 				93D6CFED200530CE00EE0E70 /* FactsPersistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if session.isUserLoggedIn {
-            presentFactsController()
+            presentStudentsController()
         } else {
             presentLoginController()
         }
@@ -41,28 +41,29 @@ class MainViewController: UIViewController {
         }
     }
     
-    func presentFactsController() {
+    func presentStudentsController() {
         let factsStoryboard = UIStoryboard(name: "StudentFacts", bundle: Bundle.main)
         guard let factsNavigationVC = factsStoryboard.instantiateInitialViewController() as? UINavigationController,
-            let decksVC = decksNavigationVC.childViewControllers.first as? DecksViewController else {
-                print("Failed Decks View Controller INIT")
+            let studentsVC = factsNavigationVC.childViewControllers.first as? StudentsViewController else {
+                print("Failed Facts View Controller INIT")
                 return
         }
-        decksVC.session = session
-        decksVC.model = DecksModel(decksPersistence: session.decksPersistence)
+        studentsVC.session = session
+        // TODO:  Do I want to use student persistence and/or student model here instead?
+        studentsVC.model = MathFactsModel(factsPersistence: session.mathFactsPersistence)
         
         if let loginVC = childViewControllers.first as? LoginViewController {
-            transition(from: loginVC, to: decksNavigationVC, duration: 0.5, setup: {
-                decksNavigationVC.view.alpha = 0.0
+            transition(from: loginVC, to: factsNavigationVC, duration: 0.5, setup: {
+                factsNavigationVC.view.alpha = 0.0
             }, animation: {
-                decksNavigationVC.view.alpha = 1.0
+                factsNavigationVC.view.alpha = 1.0
                 loginVC.view.alpha = 0.0
             })
         } else {
-            addFullScreen(controller: decksNavigationVC, animationDuration: 0.5, setup: {
-                decksNavigationVC.view.alpha = 0.0
+            addFullScreen(controller: factsNavigationVC, animationDuration: 0.5, setup: {
+                factsNavigationVC.view.alpha = 0.0
             }, animation: {
-                decksNavigationVC.view.alpha = 1.0
+                factsNavigationVC.view.alpha = 1.0
             })
         }
     }
@@ -72,7 +73,7 @@ extension MainViewController: LoginViewControllerDelegate {
     func loginButtonPressed() {
         session.attemptLogin { success in
             if success {
-                self.presentDecksController()
+                self.presentStudentsController()
             }
         }
     }
